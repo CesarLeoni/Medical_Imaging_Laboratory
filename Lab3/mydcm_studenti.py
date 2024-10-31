@@ -58,7 +58,7 @@ mydcm6 = dicom.dcmread(cale_dcm2)
 # Extragem și afișăm informațiile dorite
 print("Imaginea aleasa: ",'img01.dcm')
 img = mydcm6.pixel_array
-plt.imshow(img)
+plt.imshow(img,cmap='gray')
 plt.show()
 print("Numele pacientului:", mydcm6.get("PatientName", "Necunoscut"))
 print("Greutatea pacientului:", mydcm6.get("PatientWeight", "Necunoscut"),"kg")

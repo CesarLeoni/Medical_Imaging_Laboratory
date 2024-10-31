@@ -34,5 +34,5 @@ files =['scintigrafia.jpg', 'CThead.tif', 'mdb028.png', 'prosthesis.bmp']
 for i in os.listdir(cale):
     cale_img = os.path.join(cale, i)
     img = Image.open(cale_img)
-    plt.imshow(img)
+    plt.imshow(img,cmap='gray')
     plt.show()
