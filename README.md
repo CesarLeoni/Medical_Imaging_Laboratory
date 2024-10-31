@@ -19,7 +19,7 @@
 ## Lab 3: DICOM and NIfTI standard for medical imaging using Pillow and Nibabel libraries
 
 ### DICOM (Digital Imaging and Communications in Medecine) data extracted
-![image](https://github.com/user-attachments/assets/06c12200-45ad-42d3-a1e4-0cd98d5589c9)
+![image](https://github.com/user-attachments/assets/4b352157-3a10-4b19-91dd-da7e5a671ecc)
 ![image](https://github.com/user-attachments/assets/3d7a2bd7-9e8e-48ab-8461-0b1ad70833ef)
 
 ### NIfTI - Neuroimaging Informatics Technology Initiative
