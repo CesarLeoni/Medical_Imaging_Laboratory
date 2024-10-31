@@ -14,7 +14,7 @@
 ### Same as earlier, but with more complicated colors (turqoise) obtained by multiplying each planes matrix (RGB) with corresponding RGB coefficients for tuqoise (0.15R 0.78G 0.82B - #26C7D1 in Hex)
 ![image](https://github.com/user-attachments/assets/406dbbb0-bc93-4fb9-bd57-99d859303b72)
 
-## Lab 3: DICOM and NIfTI standard for medical imaging
+## Lab 3: DICOM and NIfTI standard for medical imaging using Pillow and Nibabel libraries
 
 ### DICOM (Digital Imaging and Communications in Medecine) data extracted
 ![image](https://github.com/user-attachments/assets/06c12200-45ad-42d3-a1e4-0cd98d5589c9)
