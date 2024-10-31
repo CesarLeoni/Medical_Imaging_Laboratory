@@ -22,3 +22,4 @@
 
 ### NIfTI - Neuroimaging Informatics Technology Initiative
 ![image](https://github.com/user-attachments/assets/746577d6-da35-4ec1-b536-5d7354fa29f9)
+![image](https://github.com/user-attachments/assets/2523110d-b75a-4830-a157-1314b960cafb)
