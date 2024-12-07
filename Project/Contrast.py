@@ -134,7 +134,7 @@ for i in range(1,11):
             #partial(histogram_equalization),
             partial(contrast_liniar_portiuni,L=L,a=80,b=175,Ta=50,Tb=205)
         )
-        save_path = os.path.join(save_directory, f"{i}.png")
+        save_path = os.path.join(save_directory, f"cntrast_{i}.png")
         image = Image.fromarray(contrast_liniar_portiuni(m,L=L,a=80,b=175,Ta=50,Tb=205))
         image.save(save_path)
         print(f"Image saved at {save_path}")
