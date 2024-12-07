@@ -4,6 +4,8 @@ from PIL import Image
 
 import numpy as np
 import matplotlib.pyplot as plt
+import cv2
+
 def rgb2gri(img_in, format):
     img_in=img_in.astype('float')
     s=img_in.shape
@@ -98,6 +100,21 @@ def afisare(img,f1,f2,f3):
     plt.subplot(2,2,4),plt.imshow(img_3,cmap="gray"),plt.title(f3.func.__name__)
     plt.show()
 
+
+def histogram_equalization(img):
+    # Convert the image to grayscale if it is not already
+    if len(img.shape) == 3:  # If the image is a color image (RGB/BGR)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Ensure the image is in 8-bit unsigned integer format (CV_8UC1)
+    img = np.uint8(img * 255) if img.dtype != np.uint8 else img
+
+    # Apply histogram equalization
+    img_equalized = cv2.equalizeHist(img)
+
+    return img_equalized
+
+
 cale = os.path.join(os.path.dirname(__file__), "img")
 
 save_directory = os.path.join(os.path.dirname(__file__), "contrast_img")
@@ -114,6 +131,7 @@ for i in range(1,11):
             m,
             partial(contrast_putere,L=L,r=1),
             partial(contrast_log,L=L),
+            #partial(histogram_equalization),
             partial(contrast_liniar_portiuni,L=L,a=80,b=175,Ta=50,Tb=205)
         )
         save_path = os.path.join(save_directory, f"{i}.png")
@@ -124,3 +142,10 @@ for i in range(1,11):
         print(f"Image {i}.png not found in {cale}")
 
 print("Contrasted images saved")
+
+plt.suptitle("Egalizare de histograma")
+for i in range(1,10):
+    cale_img = os.path.join(cale, f"{i}.png")
+    m = plt.imread(cale_img)
+    plt.subplot(3,3,i),plt.imshow(histogram_equalization(m),cmap="gray")
+plt.show()
