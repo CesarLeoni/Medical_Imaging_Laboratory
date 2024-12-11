@@ -26,7 +26,7 @@ save_directory = os.path.join(os.path.dirname(__file__), "segmentare_img")
 os.makedirs(save_directory, exist_ok=True)
 
 L=256
-prag = 128
+prag = 110
 
 plt.suptitle("Imagini segmentate")
 
