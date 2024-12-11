@@ -101,18 +101,18 @@ def afisare(img,f1,f2,f3):
     plt.show()
 
 
-def histogram_equalization(img):
-    # Convert the image to grayscale if it is not already
-    if len(img.shape) == 3:  # If the image is a color image (RGB/BGR)
+def egalizare_histograma(img):
+    # Verifică dacă imaginea este una color (RGB/BGR)
+    if len(img.shape) == 3:  # Imagine color
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # Ensure the image is in 8-bit unsigned integer format (CV_8UC1)
+    # Asigură-te că imaginea este în format de 8 biți (CV_8UC1)
     img = np.uint8(img * 255) if img.dtype != np.uint8 else img
 
-    # Apply histogram equalization
-    img_equalized = cv2.equalizeHist(img)
+    # Aplică egalizarea histogramei
+    img_equalizat = cv2.equalizeHist(img)
 
-    return img_equalized
+    return img_equalizat
 
 
 cale = os.path.join(os.path.dirname(__file__), "img")
@@ -147,5 +147,5 @@ plt.suptitle("Egalizare de histograma")
 for i in range(1,10):
     cale_img = os.path.join(cale, f"{i}.png")
     m = plt.imread(cale_img)
-    plt.subplot(3,3,i),plt.imshow(histogram_equalization(m),cmap="gray")
+    plt.subplot(3,3,i),plt.imshow(egalizare_histograma(m),cmap="gray")
 plt.show()
