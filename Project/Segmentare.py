@@ -67,10 +67,15 @@ def praguire_otsu(img):
     return img_praguita
 
 
-cale_img = os.path.join(cale, f"contrast_1.png")
+cale_img = os.path.join(cale, f"contrast_2.png")
 m = plt.imread(cale_img)
 m = m * (L - 1)
 
 plt.suptitle("Exemplu otsu")
 plt.plot(), plt.imshow(praguire_otsu(m), cmap="gray"), plt.title(1)
+plt.show()
+
+plt.suptitle("Img2 segmentare")
+plt.subplot(1,2,1),plt.imshow(m,cmap="gray"),plt.title("originală")
+plt.subplot(1,2,2),plt.imshow(binarizare(m,L,prag),cmap="gray"),plt.title("segmentată")
 plt.show()

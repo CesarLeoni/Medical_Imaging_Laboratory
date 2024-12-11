@@ -130,11 +130,11 @@ for i in range(1,11):
         afisare(
             m,
             partial(contrast_putere,L=L,r=1),
-            partial(contrast_log,L=L),
-            #partial(histogram_equalization),
+            #partial(contrast_log,L=L),
+            partial(egalizare_histograma),
             partial(contrast_liniar_portiuni,L=L,a=80,b=175,Ta=50,Tb=205)
         )
-        save_path = os.path.join(save_directory, f"cntrast_{i}.png")
+        save_path = os.path.join(save_directory, f"contrast_{i}.png")
         image = Image.fromarray(contrast_liniar_portiuni(m,L=L,a=80,b=175,Ta=50,Tb=205))
         image.save(save_path)
         print(f"Image saved at {save_path}")
@@ -143,9 +143,17 @@ for i in range(1,11):
 
 print("Contrasted images saved")
 
+plt.suptitle("Imagini originale")
+for i in range(1,10):
+    cale_img = os.path.join(cale, f"{i}.png")
+    m = plt.imread(cale_img)
+    plt.subplot(3,3,i),plt.imshow(m,cmap="gray")
+plt.show()
+
 plt.suptitle("Egalizare de histograma")
 for i in range(1,10):
     cale_img = os.path.join(cale, f"{i}.png")
     m = plt.imread(cale_img)
     plt.subplot(3,3,i),plt.imshow(egalizare_histograma(m),cmap="gray")
 plt.show()
+

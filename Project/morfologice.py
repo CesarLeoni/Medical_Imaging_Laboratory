@@ -13,9 +13,9 @@ def afisare(img):
     img_3 = sc.binary_opening(img)
     img_4 = sc.binary_closing(img)
 
-    plt.suptitle("Comparatie morfologie")
+    plt.suptitle("Comparație operații morfologice")
     plt.subplot(2,3,1),plt.imshow(img,cmap="gray"),plt.title("Imagine originala")
-    plt.subplot(2,3,2),plt.imshow(img_1,cmap="gray"),plt.title("Erosiune")
+    plt.subplot(2,3,2),plt.imshow(img_1,cmap="gray"),plt.title("Erodare")
     plt.subplot(2,3,3),plt.imshow(img_2,cmap="gray"),plt.title("Dilatare")
     plt.subplot(2,3,4),plt.imshow(img_3,cmap="gray"),plt.title("Deschidere")
     plt.subplot(2, 3, 5), plt.imshow(img_4, cmap="gray"), plt.title("Inchidere")
