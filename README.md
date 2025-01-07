@@ -1,5 +1,11 @@
 # Laboratory taken at the University Politehnica of Bucharest for analysing medical images
 
+# Project: Brast cancer detection enhancement by immage processing
+
+## The project documentation is available [HERE](./Project/443Bb_Calut_Ichim_Leoni_RF.pdf)
+
+
+
 ## Lab 2: playing with python functionalities for changing a picture's properties by manipulating different data types
 
 ### Transformed RGB image to grayscale image using the rgb2gri function
